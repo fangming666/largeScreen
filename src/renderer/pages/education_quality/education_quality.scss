@@ -1,0 +1,120 @@
+
+.education-nav {
+  text-align: center;
+  margin-top: 18px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.education-district {
+  display: inline-block;
+  float: left;
+  height: 38px;
+  width: auto;
+  padding: 0 16px;
+  background-image: url("../../static/education-nav.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 19.61px;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 34px;
+  margin-right: 14px;
+  margin-bottom: 0;
+  margin-top: 0;
+  cursor: pointer;
+  &:active {
+    background-image: url("../../static/education-nav-click.png");
+  }
+
+  span {
+    position: relative;
+    margin-right: 15px;
+
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      right: -9px;
+      top: 12px;
+      background: #FFFFFF;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.education-subject {
+  @extend .education-district;
+  background-image: url("../../static/subject-nav.png");
+  margin-right: 0;
+
+  &:active {
+    background-image: url("../../static/subject-nav-click.png");
+  }
+}
+
+.single-branch {
+  margin-left: 40px;
+  position: relative;
+
+  &::before {
+    display: block;
+    background-image: radial-gradient(50% 100%, #0A66C7 50%, #0956B4 100%);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.28);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 15px;
+  }
+}
+
+.single-branch-item {
+  background: #130E51;
+  border: 1px solid #244F8F;
+  border-radius: 21.5px;
+  margin-right: 15px;
+  padding: 0 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+
+  height: 36px;
+  box-sizing: border-box;
+
+  a {
+    color: #44C5FF;
+    text-decoration: none;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.single-branch-item-active {
+    padding: 3px;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 16px;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      background: #0B68C9;
+      border: 1px solid #318EFB;
+      box-shadow: inset 0 0 11px 0 #040050;
+      border-radius: 21.5px;
+      color: #FFFFFF;
+    }
+  }
+}
+

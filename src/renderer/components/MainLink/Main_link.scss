@@ -1,0 +1,34 @@
+.main-link {
+  text-align: center;
+  padding-top: 12px;
+}
+.link-exam {
+  display: inline-block;
+  width: 140px;
+  height: 30px;
+  background-image: url("../../static/link-exam.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  vertical-align: top;
+  &.router-link-active{
+    height: 34px;
+    background-image: url("../../static/link-exam-active.png");
+  }
+}
+.link-education{
+  @extend .link-exam;
+  width: 190px;
+  background-image: url("../../static/link-education.png");
+  margin-left: -22px;
+  margin-right: -22px;
+  &.router-link-active{
+    background-image: url("../../static/link-education-active.png");
+  }
+}
+.link-teacher{
+  @extend .link-exam;
+  background-image: url("../../static/link-teacher.png");
+  &.router-link-active{
+    background-image: url("../../static/link-teacher-active.png");
+  }
+}
