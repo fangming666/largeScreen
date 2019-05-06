@@ -22,7 +22,7 @@
                 <template slot-scope="scope">
                     <div :class="SuperaverageClass(scope.row.superaverageRate).getStyle()">
                         <i class="fa" :class="SuperaverageClass(scope.row.superaverageRate).getIcon()"></i>
-                        <span style="margin-left: 7px">{{ scope.row.superaverageRate}}</span>
+                        <span style="margin-left: 7px">{{ Math.abs(scope.row.superaverageRate)}}</span>
                     </div>
                 </template>
             </el-table-column>

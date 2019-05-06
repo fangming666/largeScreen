@@ -256,6 +256,8 @@
         },
         mounted() {
             let resultArr = [];
+            let manNum = 0,
+            womanNum = 0;
             for (let child of this.req_data) {
                 this.schoolArr = [...this.schoolArr, {active: false, content: child.school}];
                 this.gradeArr = [...this.gradeArr, {active: false, content: child.grade}];
@@ -263,8 +265,22 @@
                 this.educationalArr = [...this.educationalArr, {active: false, content: child.educational}];
                 this.sexArr = [...this.sexArr, {active: false, content: child.sex}];
                 let changeChild = child;
-                changeChild["imgHref"] = `${child.sex === "男" ? this.manImgArr[(Math.floor(Math.random() * 20 + 1) - 1)] :
-                    this.womanImgArr[(Math.floor(Math.random() * 20 + 1) - 1)]}`;
+                if(child.sex === "男"){
+                    manNum ++;
+                    if(manNum ===5){
+                        changeChild["imgHref"] =   this.manImgArr[0]
+                    }else{
+                        changeChild["imgHref"] =   this.manImgArr[(Math.floor(Math.random() * 20 + 1) - 1)]
+                    }
+                }else{
+                    womanNum++;
+                    if(womanNum ===3){
+                        changeChild["imgHref"] =   this.womanImgArr[0]
+                    }else{
+                        changeChild["imgHref"] =   this.womanImgArr[(Math.floor(Math.random() * 20 + 1) - 1)]
+                    }
+                }
+
                 resultArr = [...resultArr, changeChild]
             }
             this.subjectArr = [{active: false, content: "数学"}, {active: false, content: "语文"}, {

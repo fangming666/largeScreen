@@ -25,11 +25,11 @@
                     </dl>
                     <dl class="clearfix">
                         <dt class="float-left">学历：</dt>
-                        <dd class="float-left">{{visitingCardJson.academic}}</dd>
+                        <dd class="float-left">{{visitingCardJson.educational}}</dd>
                     </dl>
                     <dl class="clearfix">
                         <dt class="float-left">职称：</dt>
-                        <dd class="float-left">{{visitingCardJson.educational}}</dd>
+                        <dd class="float-left">{{visitingCardJson.academic}}</dd>
                     </dl>
                     <dl class="clearfix">
                         <dt class="float-left">电话：</dt>
@@ -104,6 +104,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 10;
     }
 
     .visiting-card {

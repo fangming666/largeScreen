@@ -29,13 +29,15 @@ Vue.use(ElementUI);
 Vue.use(Highcharts);
 
 // Vue.component('font-awesome-icon', FontAwesomeIcon);
-let devInnerHeight = 1080.0;// 开发时的InnerHeight
-let devDevicePixelRatio = 1.0;// 开发时的devicepixelratio
-let devScaleFactor = document.body.offsetWidth>2000?2:1; // 开发时的ScaleFactor
-let scaleFactor = require('electron').screen.getPrimaryDisplay().scaleFactor;
-let zoomFactor = (window.innerHeight / devInnerHeight) * (window.devicePixelRatio / devDevicePixelRatio) * (devScaleFactor / scaleFactor)
-require('electron').webFrame.setZoomFactor(zoomFactor);
-
+console.log("document.body.height is", document.body.offsetHeight);
+ if (document.body.offsetHeight > 1080||document.body.offsetHeight <= 768) {
+    let devInnerHeight = 1080;// 开发时的InnerHeight
+    let devDevicePixelRatio = 1.0;// 开发时的devicepixelratio
+    let devScaleFactor = 1; // 开发时的ScaleFactor
+    let scaleFactor = require('electron').screen.getPrimaryDisplay().scaleFactor;
+    let zoomFactor = (window.innerHeight / devInnerHeight) * (window.devicePixelRatio / devDevicePixelRatio) * (devScaleFactor / scaleFactor);
+    require('electron').webFrame.setZoomFactor(zoomFactor);
+}
 let loadingInstance = "";
 //axios拦截器
 axios.interceptors.request.use(function (config) {

@@ -16,6 +16,7 @@
             <el-table-column
                     prop="titleNum"
                     label="题号"
+
             >
             </el-table-column>
             <el-table-column

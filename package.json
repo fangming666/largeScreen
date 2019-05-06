@@ -7,8 +7,9 @@
   "license": null,
   "main": "./dist/electron/main.js",
   "scripts": {
-    "build": "node .electron-vue/build.js",
+    "build": "node .electron-vue/build.js  electron-builder",
     "mock": "node static/mock/server.js",
+    "build:dir": "node .electron-vue/build.js  electron-builder --dir",
     "build:darwin": "cross-env BUILD_TARGET=darwin node .electron-vue/build.js",
     "build:linux": "cross-env BUILD_TARGET=linux node .electron-vue/build.js",
     "build:mas": "cross-env BUILD_TARGET=mas node .electron-vue/build.js",

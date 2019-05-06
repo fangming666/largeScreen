@@ -717,17 +717,17 @@ export default {
                         superaverageRate: -0.96, //与上次考试相比超均率变化
                         thisSuperaverage: 10.96, //本次超均率变化
                         lastSuperaverage: 11.92, //上次超均率变化
-                        ranking: -1, //名次变化
+                        ranking: 0, //名次变化
                         thisRanking: 2, //本次名次变化
-                        lastRanking: 1, //上次名次变化
+                        lastRanking: 2, //上次名次变化
                     }, {
                         name: "一中", //学校名称
                         superaverageRate: -2.58, //与上次考试相比超均率变化
                         thisSuperaverage: 11.35, //本次超均率变化
                         lastSuperaverage: 13.93, //上次超均率变化
-                        ranking: 1, //名次变化
+                        ranking: 0, //名次变化
                         thisRanking: 1, //本次名次变化
-                        lastRanking: 2, //上次名次变化
+                        lastRanking: 1, //上次名次变化
                     },
                         {
                             name: "二中", //学校名称

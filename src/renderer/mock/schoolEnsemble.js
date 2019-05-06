@@ -363,26 +363,26 @@ export default {
                       superaverageRate: 0.16, //与上次考试相比超均率变化
                       thisSuperaverage: 1.24, //本次超均率变化
                       lastSuperaverage: 1.08, //上次超均率变化
-                      ranking: 0, //名次变化
+                      ranking: 1, //名次变化
                       thisRanking: 1, //本次名次变化
-                      lastRanking: 1, //上次名次变化
+                      lastRanking: 2, //上次名次变化
                   }, {
                       name: "1班", //班级名称
                       superaverageRate: -1.09, //与上次考试相比超均率变化
                       thisSuperaverage: 0.35, //本次超均率变化
                       lastSuperaverage: 1.44, //上次超均率变化
-                      ranking: 1, //名次变化
+                      ranking: -1, //名次变化
                       thisRanking: 2, //本次名次变化
-                      lastRanking: 3, //上次名次变化
+                      lastRanking: 1, //上次名次变化
                   },
                       {
                           name: "2班", //班级名称
                           superaverageRate: -0.52, //与上次考试相比超均率变化
                           thisSuperaverage: 0.13, //本次超均率变化
                           lastSuperaverage: 0.75, //上次超均率变化
-                          ranking: -1, //名次变化
+                          ranking: 0, //名次变化
                           thisRanking: 3, //本次名次变化
-                          lastRanking: 2, //上次名次变化
+                          lastRanking: 3, //上次名次变化
                       },
                       {
                           name: "3班", //班级名称

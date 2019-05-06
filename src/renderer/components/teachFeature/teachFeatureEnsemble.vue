@@ -76,6 +76,7 @@
             display: block;
             border-radius: 50%;
             margin: 0 auto;
+            /*border: 1px solid #979797;*/
         }
 
         p {
